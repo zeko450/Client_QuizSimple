@@ -1,0 +1,17 @@
+<form #edit_form="ngForm" (ngSubmit)="updateQuiz()">
+    <div *ngFor="let question of ListeQuestion">
+        <div> {{ question.enonce}}</div>
+        <div id="{{question.questionId}}">
+            <div class="border">
+                <div *ngFor="let option of ListeOption">
+                    <div *ngIf="question.questionId == option.questionId">
+                        <input type="radio" name="{{option.questionId}}" id="{{option.optionId}}"
+                            value="{{option.texte}}">
+                        <label for="{{ option.optionId }}">{{ option.texte }}</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-primary"  routerLinkActive="active"> Soumettre</button>
+</form>

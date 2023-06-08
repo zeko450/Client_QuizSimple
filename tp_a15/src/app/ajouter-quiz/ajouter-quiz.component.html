@@ -1,0 +1,26 @@
+<form (ngSubmit)="genererQuiz()">
+    <div class="container">
+    <div class="row my-3">
+        <div class="col-6">Nom du quiz :</div>
+        <div class="col-6"><input type="text" name="titre" id="titre" placeholder="NomQuiz" [(ngModel)]="infoQuiz.titre"></div>
+    </div>
+    <div class="row my-3">
+        <div class="col-6">Nombres des questions de type <span style="color:blue">Facile</span> </div>
+        <div class="col-6"><input type="number"  name="nbFacile" id="nbFacile" min=0 value="0" [(ngModel)]="infoQuiz.nbFacile"></div>
+    </div>
+    <div class="row my-3">
+        <div class="col-6">Nombres des questions de type <span style="color:blue">Moyen</span></div>
+        <div class="col-6"><input type="number" name="nbMoyen" id="nbMoyen" min=0 value="0" [(ngModel)]="infoQuiz.nbMoyen"></div>
+    </div>
+    <div class="row my-3">
+        <div class="col-6">Nombres des questions de type <span style="color:blue">Difficile</span></div>
+        <div class="col-6"><input type="number" name="nbDifficile" id="nbDifficile" min=0 value="0" [(ngModel)]="infoQuiz.nbDifficile"></div>
+    </div>
+
+    
+    <button class="btn btn-primary">Generer Quiz</button>  
+
+    </div>
+  </form>
+
+

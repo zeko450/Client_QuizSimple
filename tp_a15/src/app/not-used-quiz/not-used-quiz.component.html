@@ -1,0 +1,12 @@
+<div class="text-center my-5">
+  <h4>Choisir un quiz</h4>
+</div>
+<div class="text-center">
+  <table class="table table-hover">
+    <tr *ngFor="let quiz of quizs">
+      <td>
+        <a routerLink="/passerQuiz/{{quiz.quizId}}" routerLinkActive="active"> {{quiz.titre}} </a>
+      </td>
+    </tr>
+  </table>
+</div>
