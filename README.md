@@ -1,4 +1,3 @@
-# Client_QuizSimple
 
 # Angular Client
 
