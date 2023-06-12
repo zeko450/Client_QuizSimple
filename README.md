@@ -1,4 +1,10 @@
 
+## QuizSimple
+QuizSimple. A fun application used to take quizzes on general knowledge.  
+You can make your own quiz and choose how many questions there will be.  
+You can also choose the difficulty (Easy, Medium, Hard) for each question.  
+At the end, you can check your grade, your mistake and the correct answer.  
+
 ## Prerequisite 
 QuizSimple service  https://github.com/zeko450/QuizSimple  
 
