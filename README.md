@@ -6,7 +6,8 @@ You can also choose the difficulty (Easy, Medium, Hard) for each question.
 At the end, you can check your grade, your mistake and the correct answer.  
 
 ## Prerequisite 
-QuizSimple service  https://github.com/zeko450/QuizSimple  
+1) QuizSimple service executed. https://github.com/zeko450/QuizSimple  
+2) Download Client_QuizSimple.zip
 
 ## Execute QuizSimple Client
 1) **Unzip** Client_QuizSimple-master
