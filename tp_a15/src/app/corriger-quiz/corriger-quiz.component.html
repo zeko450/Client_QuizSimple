@@ -1,25 +1,25 @@
 <form #edit_form="ngForm">
 
+    <!-- For each question in the quiz.-->
     <div *ngFor="let question of ListeQuestion">
+        <!-- Display question statement. -->
         <div> {{question.enonce}}</div>
 
         <div id="{{question.questionId}}">
 
             <div class="border">
-
+                <!--For each option in the question.-->
                 <div *ngFor="let option of ListeOption;">
-
+                    <!-- Associate each option to the question using questionId attribute.-->
                     <div *ngIf="question.questionId == option.questionId">
-
+                        <!-- Displays radioButton.-->
                         <input type="radio" name="{{option.questionId}}" id="{{option.optionId}}"
                             value="{{option.texte}}">
-
+                        <!-- Display the radioButton statement for the correct option and turn it in green.-->
                         <label *ngIf="option.estVrai == true" for="{{ option.optionId }}"
-                            style="color:green; font-weight: bolder;">{{
-                            option.texte }}</label>
-                            
-                        <label *ngIf="option.estVrai == false" for="{{ option.optionId }}">{{ option.texte }}</label>
-
+                            style="color:green; font-weight: bolder;">{{option.texte }}</label>
+                        <!-- Display the radioButton statements for the other options. -->
+                            <label *ngIf="option.estVrai == false" for="{{ option.optionId }}">{{ option.texte }}</label>
                     </div>
                 </div>
             </div>
