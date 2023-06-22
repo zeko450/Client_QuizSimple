@@ -3,3 +3,32 @@
     background-color: rgba(0, 0, 0, 0.6);
     margin-top: 3%;
 }
+.bg{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.copyright {
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+    color:white;
+    text-align: center;
+}
+
+h1,h2,h3,h4,h5,h6  {
+    text-align:center ;
+}
+
+h6{ 
+    text-decoration: underline;
+    text-underline-offset: 20%;
+    color: yellowgreen;
+}
+
+.credits {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.icon {
+    text-align: center;
+}

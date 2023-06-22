@@ -2,18 +2,48 @@
     <div class="container">
         <a class="navbar-brand" href="#home"> <span style="color:aliceblue">Quiz Simple</span></a>
 
-       
+
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link link-warning" id="navItem" aria-current="page" routerLink="/ajouterQuiz" routerLinkActive="active">Nouveau </a>
+                <a class="nav-link link-warning" id="navItem" aria-current="page" routerLink="/ajouterQuiz"
+                    routerLinkActive="active">Nouveau Quiz </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link link-warning " id="navItem" aria-current="page" routerLink="/listerQuizNU" routerLinkActive="active">Testez </a>
+                <a class="nav-link link-warning " id="navItem" aria-current="page" routerLink="/listerQuizNU"
+                    routerLinkActive="active">Passer Quiz </a>
             </li>
             <li class="nav-item mx-2">
-                <a class="nav-link link-warning" id="navItem" aria-current="page" routerLink="/listerQuizU" routerLinkActive="active">Reviser</a>
-            </li>           
+                <a class="nav-link link-warning" id="navItem" aria-current="page" routerLink="/listerQuizU"
+                    routerLinkActive="active">Réviser Quiz</a>
+            </li>
         </ul>
     </div>
 </nav>
 <router-outlet></router-outlet>
+<footer class="mt-5">
+
+    <div class="container-expand mx-5 bg">
+        <div class="text-light">
+            <div class="row">
+                <span class="copyright">
+                 Ceci est un projet Opensource. Vous avez le droit d'utiliser, de modifier et / ou de distribuer ce projet à votre guise. 
+                </span>
+                <div class="row mt-2">
+                    <h6> Crédits </h6>
+                    <span class="credits">
+                        Derbali Lotfi  <br>
+                        Maouchi Menad <br>
+                        Guissouss Ayoub <br>
+                        Kachach Mohamed
+                    </span>
+                    <div class="row mt-2">
+                        <span class="icon">
+                           <img src="../assets/images/LogoBdeb.jpg" alt="bdeb Logo" height="32px"/> College Bois de boulogne 2022-2023 
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
