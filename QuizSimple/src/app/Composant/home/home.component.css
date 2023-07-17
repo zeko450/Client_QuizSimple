@@ -1,0 +1,22 @@
+.heroDiv{
+    background-color: rgb(220, 217, 217,0.7);
+}
+
+.heroText {
+    font-weight: bolder;
+}
+
+.heroBtn {
+    margin: 5px;
+    position:  relative;
+    top: 50%;
+    left: 42%;
+    -ms-transform: translate(-40%, -40%);
+    transform: translate(-50%, -50%);
+}
+
+.heroBorder {
+    border: double;
+    border-color: green;
+    border-width: 5px;
+}

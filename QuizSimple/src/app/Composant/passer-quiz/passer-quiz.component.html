@@ -1,5 +1,8 @@
+<div class="container">
 <form #edit_form="ngForm" (ngSubmit)="updateQuiz()">
+    <h1>{{titre}}</h1>
     <div *ngFor="let question of ListeQuestion">
+        <br>
         <div> {{ question.enonce}}</div>
         <div id="{{question.questionId}}">
             <div class="border">
@@ -13,5 +16,7 @@
             </div>
         </div>
     </div>
-    <button class="btn btn-primary"  routerLinkActive="active"> Soumettre</button>
+    <br>
+    <button routerLinkActive="active"> <a class="btn btn-primary mt-1"> Soumettre </a></button>
 </form>
+</div>

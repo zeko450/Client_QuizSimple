@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AppRoutingModule } from '../app-routing.module';
-import { AppComponent } from '../app.component';
-import { InfoQuiz } from '../models/info-quiz';
-import { Question } from '../models/question';
-import { Quiz } from '../models/quiz';
-import { RestApiQuizService } from '../service/rest-api-quiz.service'
+import { AppRoutingModule } from '../../app-routing.module';
+import { AppComponent } from '../../app.component';
+import { InfoQuiz } from '../../models/info-quiz';
+import { Question } from '../../models/question';
+import { Quiz } from '../../models/quiz';
+import { RestApiQuizService } from '../../service/rest-api-quiz.service'
 
 @Component({
   selector: 'app-ajouter-quiz',
@@ -33,6 +33,7 @@ export class AjouterQuizComponent implements OnInit {
       this.peuplerQuizFacile();
       this.peuplerQuizMoyen();
       this.peuplerQuizDifficile();
+      this.rediriger();
     })
 
   }
@@ -58,8 +59,8 @@ export class AjouterQuizComponent implements OnInit {
     }
   }
 
- redirigerAcceuil() {
-    this.redirect.dispose();
+  rediriger() {
+    this.redirect.navigate(['listerQuizNU'])
   }
 
 }

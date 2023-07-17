@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { Question } from '../models/question';
-import { Options } from '../models/options';
-import { RestApiQuizService } from '../service/rest-api-quiz.service';
+import { Question } from '../../models/question';
+import { Options } from '../../models/options';
+import { RestApiQuizService } from '../../service/rest-api-quiz.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { QuizQuestion } from '../models/quiz-question';
-import { QuizQuestionPK } from '../models/quiz-question-pk';
+import { QuizQuestion } from '../../models/quiz-question';
+import { QuizQuestionPK } from '../../models/quiz-question-pk';
+import { Quiz } from 'src/app/models/quiz';
 
 @Component({
   selector: 'app-passer-quiz',
@@ -12,17 +13,29 @@ import { QuizQuestionPK } from '../models/quiz-question-pk';
   styleUrls: ['./passer-quiz.component.css']
 })
 export class PasserQuizComponent implements OnInit {
-
+  titre = "";
+  quiz : Quiz = new Quiz(0,"");
   ListeQuestion: Question[] = [];
   ListeOption: Options[] = [];
   ListeQuizQuestion: QuizQuestion[] = [];
   quizQuestionPK : QuizQuestionPK = new QuizQuestionPK(0,0);
   quizQuestion : QuizQuestion = new QuizQuestion(this.quizQuestionPK,0);
-  choix: string = ""
+  choix: string = "";
   id = 0;
 
   constructor(private restApi: RestApiQuizService, private router: ActivatedRoute) {
     var quizId = this.router.snapshot.paramMap.get("id");
+
+      //Recupere un quiz
+      this.restApi.getNotUsedQuizzes().subscribe((res) => {
+        for (var tmp of res){
+          if(tmp.quizId == this.id)
+          console.log(tmp.quizId);
+          console.log(this.id);
+          this.titre = tmp.titre;
+        }
+  });
+
 
       //Recupere les questions d'un quiz
     if (quizId != null) {
@@ -35,12 +48,12 @@ export class PasserQuizComponent implements OnInit {
           this.restApi.getOptionsForQuestion(tmp.questionId).subscribe((res) => {
             for (var tmp2 of res) {
               this.ListeOption.push(tmp2);
+              
             }
           })
         }
       })
     }
-
   }
 
   ngOnInit(): void {
@@ -63,9 +76,9 @@ export class PasserQuizComponent implements OnInit {
       });
     
       //Sauvegarde les réponses dans la base de donnée
-      console.log("id:" + this.id)
-      console.log("question id : "+ tmp.questionId);
-      console.log("index" +  selectedIndex);
+//      console.log("id:" + this.id)
+  //    console.log("question id : "+ tmp.questionId);
+    //  console.log("index" +  selectedIndex);
 
       this.restApi.updateQuizQuestion(this.id, tmp.questionId, selectedIndex).subscribe((res) => {
           this.quizQuestion = res;

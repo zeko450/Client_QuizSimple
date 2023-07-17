@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Quiz } from '../models/quiz';
-import { RestApiQuizService } from '../service/rest-api-quiz.service';
+import { Quiz } from '../../models/quiz';
+import { RestApiQuizService } from '../../service/rest-api-quiz.service';
 
 @Component({
   selector: 'app-used-quiz',

@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { RestApiQuizService } from '../service/rest-api-quiz.service';
+import { RestApiQuizService } from '../../service/rest-api-quiz.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Question } from '../models/question';
-import { Options } from '../models/options';
-import { QuizQuestionPK } from '../models/quiz-question-pk';
-import { QuizQuestion } from '../models/quiz-question';
-import { SelectedOptionID } from '../models/selected-option-id';
+import { Question } from '../../models/question';
+import { Options } from '../../models/options';
+import { QuizQuestionPK } from '../../models/quiz-question-pk';
+import { QuizQuestion } from '../../models/quiz-question';
+import { SelectedOptionID } from '../../models/selected-option-id';
 
 @Component({
   selector: 'app-corriger-quiz',

@@ -1,5 +1,6 @@
+<div class="container">
 <form #edit_form="ngForm">
-
+<br>
     <!-- For each question in the quiz.-->
     <div *ngFor="let question of ListeQuestion">
         <!-- Display question statement. -->
@@ -26,5 +27,5 @@
             <br>
         </div>
     </div>
-    <button class="btn btn-primary" routerLinkActive="active"> Soumettre</button>
 </form>
+</div>
