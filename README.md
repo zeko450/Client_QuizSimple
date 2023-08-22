@@ -34,6 +34,9 @@ Once the quiz has been submitted, the method upgradeQuizQuestion is called to no
 5- **CorrectQuiz** : On loading, the service getQuestionsForQuiz and getOptionsForQuiz are called to display the quiz with the results the user submitted 
 and then the correction is made with validation using *ngIf in the html file. The correct answer turns green.
 
+### Screenshots
+![HOME](https://github.com/zeko450/Client_QuizSimple/assets/114595632/8c42433e-4e34-4a38-b4a7-d787625496f9)
+
 ### Credits 
 [Mohamed Kachach](https://github.com/zeko450/)  
 [Ayoub Guissouss](https://github.com/AyoubGuissouss/)  
